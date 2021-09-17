@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for("static", filename="main.css") }}">
+</head>
+<body>
+    <div id="header_bank" style="background-image: url({{ url_for('static', filename='background.jpg') }});">
+        <h1 id="text_bank">{{ data_banco[0][1] }}</h1>
+    </div>
+    <div id="content" class="content_bank">
+        <div id="card" class="card_bank1" style="display: flex;">
+            <div style="margin-left: 10px;">
+                <h3 id="price_title">Precio del Dolar({{ data_banco[0][12] }})</h3>
+                <div>
+                    <div style="margin-top: 10px;">
+                        <p class="text-card">Compra Actual</p>
+                        <p class="compra">${{ data_banco[0][6] }}</p>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <p class="text-card">Venta Actual</p>
+                        <p class="venta">${{ data_banco[0][7] }}</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div style="display: flex; margin-top: 55px;">
+                    <div class="price-cont">
+                        <p class="text-card">Compra 24h</p>
+                        <p class="compra">${{ data_banco[0][8] }}</p>
+                    </div>
+                    <div class="price-cont">
+                        <p class="text-card">Venta 24h</p>
+                        <p class="venta">${{ data_banco[0][9] }}</p>
+                    </div>
+                </div>
+                <div style="display: flex;">
+                    <div class="price-cont">
+                        <p class="text-card">Compra 48h</p>
+                        <p class="compra">${{ data_banco[0][10] }}</p>
+                    </div>
+                    <div class="price-cont">
+                        <p class="text-card">Venta 48h</p>
+                        <p class="venta">${{ data_banco[0][11] }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="card" class="card_bank2">
+            <h3 id="price_title">Actualizar precio dolar</h3>
+            <form action="" style="margin-top: 20px;" method="POST">
+                <div style="display: flex;">
+                    <div style="margin-left: 10px;">
+                        <p>Compra Actual</p>
+                        <input type="text" style="width: 100px; font-size: 2.5em;" name="cactual" >
+                    </div>
+                    <div style="margin-left: 10px;">
+                        <p>Venta Actual</p>
+                        <input type="text" style="width: 100px; font-size: 2.5em;" name="vactual" >
+                    </div>
+                    <div style="margin-left: 10px;">
+                        <p>Compra 24h</p>
+                        <input type="text" style="width: 100px; font-size: 2.5em;" name="c24" >
+                    </div>
+                    <div style="margin-left: 10px;">
+                        <p>Venta 24h</p>
+                        <input type="text" style="width: 100px; font-size: 2.5em;" name="v24" >
+                    </div>
+                    <div style="margin-left: 10px;">
+                        <p>Compra 48h</p>
+                        <input type="text" style="width: 100px; font-size: 2.5em;" name="c48">
+                    </div>
+                    <div style="margin-left: 10px;">
+                        <p>Venta 48h</p>
+                        <input type="text" style="width: 100px; font-size: 2.5em;" name="v48">
+                    </div>
+                    <div>
+                        <input type="submit" value="ACTUALIZAR" id="update">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

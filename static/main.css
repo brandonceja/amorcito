@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#header{
+    width: 100%;
+    height: 230px;
+    background-repeat: no-repeat;
+    background-position: 60% 60%;
+}
+
+#header_bank{
+    width: 100%;
+    height: 130px;
+    background-repeat: no-repeat;
+    background-position: 60% 60%;
+}
+
+h1{
+    text-align: center;
+    color: #fefefe;
+    font-family: monospace;
+    font-size: 3em;
+    padding-top: 80px;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
+
+#text_bank{
+    padding-top: 40px;
+}
+
+#content{
+    background-color: #dadef0;
+    width: 100%;
+    height: 520px;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.content_bank{
+    height: 620px !important;
+}
+
+#card{
+    background-color: #fefefe;
+    border-radius: 20px;
+    width: 1000px;
+    height: 450px;
+    -webkit-box-shadow: 4px 5px 15px 5px rgba(0,0,0,0.32); 
+    box-shadow: 4px 5px 15px 5px rgba(0,0,0,0.32);
+    padding: 1em;
+}
+
+.card_bank1{
+    height: 250px !important; 
+    margin-bottom: 30px;
+}
+
+
+.card_bank2{
+    height: 150px !important; 
+    margin-bottom: 30px;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+  .arrow{
+      color: #1788bd;
+      font-weight: bold;
+      text-align: center;
+      font-size: 2em;
+      text-decoration: none;
+  }
+
+  .arrow:hover{
+      cursor: pointer;
+  }
+
+  #price_title{
+      font-family: monospace;
+      font-size: 1.9em;
+      color: #3d3d3d;
+  }
+
+  .price-cont{
+      height: 80px;
+      margin-left: 100px;
+  }
+
+  .text-card{
+      font-size: 2em;
+      font-family: monospace;
+  }
+
+  .compra{
+      text-align: center;
+      color: #036491;
+      font-size: 2em;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
+  }
+
+  .venta{
+    text-align: center;
+    color: #BDB504;
+    font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+#update{
+    margin-left: 20px;
+    margin-top: 17px;
+    background-color: #036491;
+    color: #f3f3f3;
+    font-size: 1.3em;
+    padding: 0.6em 3em;
+    border-radius: 5px;
+}

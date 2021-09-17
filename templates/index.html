@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for("static", filename="main.css") }}">
+</head>
+<body>
+    <div id="header" style="background-image: url({{ url_for('static', filename='background.jpg') }});">
+        <h1>Contribución Interbancaria</h1>
+    </div>
+    <div id="content">
+        <div id="card">
+            <table id="banks">
+                <tr>
+                  <th>id</th>
+                  <th>Nombre del Banco</th>
+                  <th>Compra</th>
+                  <th>Venta</th>
+                  <th></th>
+                </tr>
+                {% for banco in data_bancos %}
+                <tr>
+                  <td>{{ banco[0] }}</td>
+                  <td>{{ banco[1] }}</td>
+                  {% if banco[2] != None %}
+                  <td>{{ banco[2] }}</td>
+                  {% else %}
+                  <td>Sin dato</td>
+                  {% endif %}
+                  {% if banco[3] != None %}
+                  <td>{{ banco[3] }}</td>
+                  {% else %}
+                  <td>Sin dato</td>
+                  {% endif %}
+                  <td><a class="arrow" href="/bancos/{{ banco[0] }}">></a></td>
+                </tr>
+                {% endfor %}
+              </table>
+        </div>
+    </div>
+</body>
+</html>
